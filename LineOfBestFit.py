@@ -30,7 +30,7 @@ def derivatives(m,b,xs,ys):
 
 #does gradiant descent by adjusting the m/b values according to the results of the derivatives() function
 def descent(m,b,ders,a):
-    newM = m-a*ders[0]
+    newM = m-a*ders[0]/10
     newB= b-a*ders[1]
     return newM,newB
 
@@ -39,8 +39,8 @@ def descent(m,b,ders,a):
 def regression(cycles, a, xs, ys):
 
     #initializes random starting variables
-    m = random.randint(-5,5)
-    b = random.randint(-30,30)
+    m = random.randint(-10,10)
+    b = random.randint(-300,500)
 
     #initializes history tracking
     history=[[m],[b], [cost(xs, ys, m, b)]]
@@ -75,7 +75,7 @@ for i in range(130):
 
 
 #number of regression cycles
-cycles=50000
+cycles=30000
 
 #calls the main regression function
 history = regression(cycles,0.00034,xs,ys)
