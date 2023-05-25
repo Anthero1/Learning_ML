@@ -13,7 +13,7 @@ import math
 noise=0.2
 xrange = 4
 leftXBound = -2
-targetThetas = [200,0,1,1,-0.5]
+targetThetas = [200,0,1,0,-0.5]
 
 
 #change these values to tune your learning
@@ -21,9 +21,9 @@ targetThetas = [200,0,1,1,-0.5]
 #degree is which degree you want the output of the learn to be
 #a is the learning rate. If the program fails to produce any curve, a is too large.
 #if the programs doesn't match the target curve well enough, either increase a or increase the number of cycles
-cycles=10000
+cycles=5000
 degree = 5
-a = 0.0002
+a = 0.002
 
 
 
